@@ -1,0 +1,6 @@
+= simple_form_for @list do |f|
+  - if @list.new_record?
+    = f.input :title, label: false, placeholder: 'Title'
+  = f.input :list, as: :text
+  = link_to "Cancel", :back, class: 'btn btn-warning'
+  = f.button :submit, class: 'btn btn-primary'
